@@ -6,15 +6,15 @@ import com.rootable.libraryservice2022.web.dto.LoginDto;
 import com.rootable.libraryservice2022.web.dto.SessionMember;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 @Slf4j
-@RestController
+@Controller
 @RequiredArgsConstructor
 public class LoginController {
 
@@ -28,17 +28,28 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@Valid @RequestBody LoginDto loginDto) {
+    public String login(@Valid @ModelAttribute("loginForm") LoginDto dto, BindingResult bindingResult,
+                        @RequestParam(defaultValue = "/") String redirectURL) {
 
         log.info("로그인 검증");
 
+        if (bindingResult.hasErrors()) {
+            log.info("검증 에러 errors={}", bindingResult);
+            return "login/signIn";
+        }
+
         //로그인 유효성 검사
-        Member loginMember = loginService.validationLogin(loginDto.getLoginId(), loginDto.getPassword());
+        Member loginMember = loginService.validationLogin(dto.getLoginId(), dto.getPassword());
         log.info("Login Member = {}", loginMember);
+
+        if (loginMember == null) {
+            bindingResult.reject("loginFail");
+            return "login/signIn";
+        }
 
         httpSession.setAttribute("loginMember", new SessionMember(loginMember)); //세션에 회원 정보 저장
 
-        return new ResponseEntity<>(loginDto, HttpStatus.CREATED); //로그인 후 최초 위치로 돌아가도록
+        return "redirect:" + redirectURL; //로그인 후 최초 위치로 돌아가도록
 
     }
 
