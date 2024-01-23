@@ -66,7 +66,7 @@ public class BookController {
 
 
         if (dto.getStock() != null && dto.getStatus() != null) {
-            //전역 에러 - DENIED 상태는 재고가 반드시 0개
+            //전역 에러 -> DENIED 상태는 재고가 반드시 0개
             if (dto.getStock() > 0 && dto.getStatus() == Status.DENIED) {
                 bindingResult.reject("invalid");
             }
