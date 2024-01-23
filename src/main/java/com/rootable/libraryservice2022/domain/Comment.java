@@ -1,7 +1,5 @@
 package com.rootable.libraryservice2022.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,12 +28,10 @@ public class Comment extends BaseTimeEntity{
     @Column(columnDefinition = "TEXT", nullable = false)
     private String comment; //댓글 내용
 
-    @JsonBackReference
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "posts_id", nullable = false)
     private Posts posts;
 
-    @JsonBackReference
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "member_id", nullable = false)
     private Member member; //작성자

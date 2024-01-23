@@ -1,7 +1,5 @@
 package com.rootable.libraryservice2022.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,12 +32,10 @@ public class Posts extends BaseTimeEntity{
     @Column(columnDefinition = "TEXT")
     private String content;
 
-    @JsonBackReference
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "member_id", nullable = false)
     private Member member; //게시물 작성자
 
-    @JsonBackReference
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "book_id", nullable = false)
     private Book book; //신청 도서
@@ -49,7 +45,6 @@ public class Posts extends BaseTimeEntity{
     @Enumerated(EnumType.STRING)
     private Result result;
 
-    @JsonManagedReference
     @OneToMany(mappedBy = "posts", cascade = CascadeType.ALL)
     @OrderBy("id asc") //댓글 정렬
     private List<Comment> commentList = new ArrayList<>();

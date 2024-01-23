@@ -1,4 +1,4 @@
-package com.rootable.libraryservice2022.web.advice;
+package com.rootable.libraryservice2022.web.interceptor;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ui.Model;
