@@ -8,6 +8,7 @@ Library Service 2022
 > Environment
 - Spring boot
 - JAVA 11
+- H2
 - ~~Loaded EC2~~
 - ~~Linked up with RDS (MySQL)~~
 
