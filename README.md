@@ -21,11 +21,11 @@
 ---
 
 ## Functions
-###1. User Service
+### 1. User Service
 
 - **게시글을 통해 도서 신청**
 
-![img_7.png](src/main/images/img_7.png)
+![img_7.png](images(README)/img_7.png)
 
 >현재 상태를 표시하여 재고 현황에 따른 신청 결과가 도출됩니다. 
  
@@ -33,53 +33,55 @@
 
 - **댓글 CRUD**
 
-![img_8.png](src/main/images/img_8.png) ![img_9.png](src/main/images/img_9.png)
+![img_8.png](images(README)/img_8.png) 
+
+![img_9.png](images(README)/img_9.png)
 
 - **나의 정보 CRU**
 
-![img_10.png](src/main/images/img_10.png)
+![img_10.png](images(README)/img_10.png)
 
 - **파일 업로드 및 다운로드**
 
-![img_6.png](src/main/images/img_6.png)
+![img_6.png](images(README)/img_6.png)
 
 - **입력 정보 검증**
 
-![img_5.png](src/main/images/img_5.png)
+![img_5.png](images(README)/img_5.png)
 
-###2. Login Service
+### 2. Login Service
 
 - **회원가입**
 
-![img_11.png](src/main/images/img_11.png)
+![img_11.png](images(README)/img_11.png)
 
 - **로그인**
 
-![img_12.png](src/main/images/img_12.png)
+![img_12.png](images(README)/img_12.png)
 
-![img_13.png](src/main/images/img_13.png)
+![img_13.png](images(README)/img_13.png)
 
-###3. Admin Service (ADMIN or STAFF)
+### 3. Admin Service (ADMIN or STAFF)
 
 - **회원/도서/게시글/댓글 CRUD**
 
-![img_14.png](src/main/images/img_14.png)
+![img_14.png](images(README)/img_14.png)
 
-![img_15.png](src/main/images/img_15.png)
+![img_15.png](images(README)/img_15.png)
 
-![img_16.png](src/main/images/img_16.png)
+![img_16.png](images(README)/img_16.png)
 
 - **권한이 부족한 회원의 접근에 대해 403 커스텀 페이지**
 
-![img_17.png](src/main/images/img_17.png)
+![img_17.png](images(README)/img_17.png)
 
-###4. AWS EC2 images (일부 마스킹)
+### 4. AWS EC2 (일부 마스킹)
 
-![img.png](src/main/images/img.png)
+![img.png](images(README)/img.png)
 
-![img_2.png](src/main/images/img_2.png)
+![img_2.png](images(README)/img_2.png)
 
-###5.AWS RDS images
+### 5.AWS RDS
 
-![img_3.png](src/main/images/img_3.png)
+![img_3.png](images(README)/img_3.png)
 
