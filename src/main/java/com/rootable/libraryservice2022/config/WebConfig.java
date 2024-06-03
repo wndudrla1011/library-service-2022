@@ -1,4 +1,4 @@
-package com.rootable.libraryservice2022;
+package com.rootable.libraryservice2022.config;
 
 import com.rootable.libraryservice2022.web.argumentresolver.LoginMemberArgumentResolver;
 import com.rootable.libraryservice2022.web.interceptor.AuthInterceptor;
