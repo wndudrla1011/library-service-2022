@@ -6,11 +6,30 @@ spring:
     driver-class-name: org.h2.Driver
 
   jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate:
         format_sql: true
 
+  messages:
+    basename: messages,errors
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+  h2:
+    console:
+      enabled: true
+
 logging:
   level:
+    root: info
     org.hibernate-SQL: debug
     org.hibernate.type: trace
+
+file:
+  dir: C:/Users/JooYoungKim/Desktop/spring/files/
