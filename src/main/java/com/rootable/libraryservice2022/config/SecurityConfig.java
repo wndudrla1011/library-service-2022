@@ -43,6 +43,7 @@ public class SecurityConfig {
                 //conf Access Control
                 .and()
                 .authorizeHttpRequests()
+                .requestMatchers(new AntPathRequestMatcher("/")).permitAll() //index 요청 허용
                 .requestMatchers(new AntPathRequestMatcher("/login")).permitAll() //로그인 요청 허용
                 .requestMatchers(new AntPathRequestMatcher("/members/add")).permitAll() //회원가입 요청 허용
                 .requestMatchers(PathRequest.toH2Console()).permitAll() //h2-console 허용
