@@ -12,7 +12,7 @@ import com.rootable.libraryservice2022.web.argumentresolver.Login;
 import com.rootable.libraryservice2022.dto.FileDto;
 import com.rootable.libraryservice2022.dto.PostDto;
 import com.rootable.libraryservice2022.dto.SessionMember;
-import com.rootable.libraryservice2022.web.file.FileStore;
+import com.rootable.libraryservice2022.file.FileStore;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

@@ -1,4 +1,4 @@
-package com.rootable.libraryservice2022.web.file;
+package com.rootable.libraryservice2022.file;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
