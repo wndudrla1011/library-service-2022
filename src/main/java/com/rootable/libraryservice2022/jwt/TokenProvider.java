@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 import java.security.Key;
 import java.util.Date;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -31,11 +32,13 @@ public class TokenProvider {
     }
 
     //토큰 검증
-    public boolean verify(String token) {
+    public Map<String, Object> verify(String token) {
+
+        Map<String, Object> claims = null;
 
         try {
             //토큰 복호화
-            Claims claims = Jwts.parserBuilder()
+            claims = Jwts.parserBuilder()
                     .setSigningKey(key)
                     .build()
                     .parseClaimsJws(token)
@@ -50,7 +53,7 @@ public class TokenProvider {
             log.info("JWT 토큰이 잘못되었습니다.");
         }
 
-        return false;
+        return claims;
 
     }
 
