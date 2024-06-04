@@ -2,8 +2,8 @@ package com.rootable.libraryservice2022.service;
 
 import com.rootable.libraryservice2022.domain.Book;
 import com.rootable.libraryservice2022.repository.BookRepository;
-import com.rootable.libraryservice2022.web.dto.BookSaveDto;
-import com.rootable.libraryservice2022.web.dto.BookUpdateDto;
+import com.rootable.libraryservice2022.dto.BookSaveDto;
+import com.rootable.libraryservice2022.dto.BookUpdateDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,15 +1,13 @@
 package com.rootable.libraryservice2022.controller;
 
 import com.rootable.libraryservice2022.domain.Comment;
-import com.rootable.libraryservice2022.domain.Member;
 import com.rootable.libraryservice2022.service.CommentService;
 import com.rootable.libraryservice2022.web.argumentresolver.Login;
-import com.rootable.libraryservice2022.web.dto.CommentRequestDto;
-import com.rootable.libraryservice2022.web.dto.SessionMember;
+import com.rootable.libraryservice2022.dto.CommentRequestDto;
+import com.rootable.libraryservice2022.dto.SessionMember;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 

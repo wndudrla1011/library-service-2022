@@ -2,8 +2,7 @@ package com.rootable.libraryservice2022.service;
 
 import com.rootable.libraryservice2022.domain.Member;
 import com.rootable.libraryservice2022.domain.Role;
-import com.rootable.libraryservice2022.repository.MemberRepository;
-import com.rootable.libraryservice2022.web.dto.MemberDto;
+import com.rootable.libraryservice2022.dto.MemberDto;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;

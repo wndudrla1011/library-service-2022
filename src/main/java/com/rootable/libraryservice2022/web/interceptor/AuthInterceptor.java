@@ -1,9 +1,8 @@
 package com.rootable.libraryservice2022.web.interceptor;
 
-import com.rootable.libraryservice2022.domain.Member;
 import com.rootable.libraryservice2022.domain.Role;
 import com.rootable.libraryservice2022.web.MySecured;
-import com.rootable.libraryservice2022.web.dto.SessionMember;
+import com.rootable.libraryservice2022.dto.SessionMember;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;

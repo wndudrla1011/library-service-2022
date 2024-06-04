@@ -2,7 +2,7 @@ package com.rootable.libraryservice2022.service;
 
 import com.rootable.libraryservice2022.domain.File;
 import com.rootable.libraryservice2022.repository.FileRepository;
-import com.rootable.libraryservice2022.web.dto.FileDto;
+import com.rootable.libraryservice2022.dto.FileDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

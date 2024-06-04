@@ -1,4 +1,4 @@
-package com.rootable.libraryservice2022.web.dto;
+package com.rootable.libraryservice2022.dto;
 
 import com.rootable.libraryservice2022.domain.File;
 import lombok.Builder;

@@ -1,8 +1,8 @@
 package com.rootable.libraryservice2022.repository;
 
 import com.rootable.libraryservice2022.domain.*;
-import com.rootable.libraryservice2022.web.dto.BookSaveDto;
-import com.rootable.libraryservice2022.web.dto.MemberDto;
+import com.rootable.libraryservice2022.dto.BookSaveDto;
+import com.rootable.libraryservice2022.dto.MemberDto;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;

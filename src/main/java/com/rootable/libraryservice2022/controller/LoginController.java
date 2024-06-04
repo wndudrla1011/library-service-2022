@@ -2,8 +2,8 @@ package com.rootable.libraryservice2022.controller;
 
 import com.rootable.libraryservice2022.domain.Member;
 import com.rootable.libraryservice2022.service.LoginService;
-import com.rootable.libraryservice2022.web.dto.LoginDto;
-import com.rootable.libraryservice2022.web.dto.SessionMember;
+import com.rootable.libraryservice2022.dto.LoginDto;
+import com.rootable.libraryservice2022.dto.SessionMember;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

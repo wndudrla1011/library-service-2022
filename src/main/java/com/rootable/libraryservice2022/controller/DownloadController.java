@@ -1,7 +1,7 @@
 package com.rootable.libraryservice2022.controller;
 
 import com.rootable.libraryservice2022.service.FileService;
-import com.rootable.libraryservice2022.web.dto.FileDto;
+import com.rootable.libraryservice2022.dto.FileDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.InputStreamResource;

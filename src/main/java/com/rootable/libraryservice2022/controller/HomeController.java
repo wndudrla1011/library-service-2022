@@ -2,7 +2,7 @@ package com.rootable.libraryservice2022.controller;
 
 import com.rootable.libraryservice2022.domain.Role;
 import com.rootable.libraryservice2022.web.argumentresolver.Login;
-import com.rootable.libraryservice2022.web.dto.SessionMember;
+import com.rootable.libraryservice2022.dto.SessionMember;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

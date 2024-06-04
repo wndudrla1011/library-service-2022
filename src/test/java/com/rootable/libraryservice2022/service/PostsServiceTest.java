@@ -4,9 +4,9 @@ import com.rootable.libraryservice2022.domain.*;
 import com.rootable.libraryservice2022.repository.BookRepository;
 import com.rootable.libraryservice2022.repository.MemberRepository;
 import com.rootable.libraryservice2022.repository.PostsRepository;
-import com.rootable.libraryservice2022.web.dto.BookSaveDto;
-import com.rootable.libraryservice2022.web.dto.MemberDto;
-import com.rootable.libraryservice2022.web.dto.PostDto;
+import com.rootable.libraryservice2022.dto.BookSaveDto;
+import com.rootable.libraryservice2022.dto.MemberDto;
+import com.rootable.libraryservice2022.dto.PostDto;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
@@ -19,7 +19,6 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

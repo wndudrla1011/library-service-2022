@@ -6,7 +6,7 @@ import com.rootable.libraryservice2022.domain.Posts;
 import com.rootable.libraryservice2022.repository.CommentRepository;
 import com.rootable.libraryservice2022.repository.MemberRepository;
 import com.rootable.libraryservice2022.repository.PostsRepository;
-import com.rootable.libraryservice2022.web.dto.CommentRequestDto;
+import com.rootable.libraryservice2022.dto.CommentRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
