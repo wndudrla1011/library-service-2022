@@ -6,29 +6,41 @@ import org.springframework.beans.factory.annotation.Value;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.*;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Component;
 
 import java.security.Key;
-import java.util.Date;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.Optional;
 
 @Slf4j
 @Component
 public class TokenProvider {
 
-    private static final String AUTHORITIES_KEY = "auth";
-    private final long tokenValidityInMilliseconds;
     private final Key key;
 
     //토큰 생성에 사용될 비밀키 생성
-    public TokenProvider(@Value("${jwt.secret}") String secret,
-                         @Value("${jwt.token-validity-in-seconds}") long tokenValidityInMilliseconds) {
+    public TokenProvider(@Value("${jwt.secret}") String secret) {
         byte[] keyBytes = Decoders.BASE64.decode(secret);
         this.key = Keys.hmacShaKeyFor(keyBytes);
-        this.tokenValidityInMilliseconds = tokenValidityInMilliseconds * 1000;
+    }
+
+    //토큰 생성
+    public String createToken(Map<String, Object> claims, Optional<LocalDateTime> myExp) {
+
+        JwtBuilder builder = Jwts.builder()
+                .setClaims(claims)
+                .setExpiration(Timestamp.valueOf(LocalDateTime.now().plusDays(1)))
+                .signWith(key, SignatureAlgorithm.HS512);
+
+        //만료 시간을 직접 넣어준 경우
+        myExp.ifPresent(exp -> {
+            builder.setExpiration(Timestamp.valueOf(exp));
+        });
+
+        return builder.compact();
+
     }
 
     //토큰 검증
